@@ -15,9 +15,12 @@ $(document).ready(function(){
     $(".resultado").click(function(){
         var valorv = $(".visor").val();
         var resultado = eval(valorv);
+
         $(".visor").val(resultado);
         var lista = $(".history > ul");
-        $(".")
+        
+        $(".no-history").remove();
+        lista.append("<li class = 'list-group-item'>" + valorv + " = " + resultado + "</li>");
     });
 
     $(".limpar").click(function(){
